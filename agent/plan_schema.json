@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "description": "RepoMind's plan: the steps it will run, in order. Every field is required and none is nullable, so the schema spends none of strict mode's optional-field or union budgets.",
+  "properties": {
+    "steps": {
+      "type": "array",
+      "description": "The steps, in the order they run. The last step is post_comment.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Unique within the plan: 1, 2, 3, ..."
+          },
+          "action": {
+            "type": "string",
+            "description": "What the step does, in words a person reviewing the plan can check."
+          },
+          "tool": {
+            "type": "string",
+            "description": "The one tool this step calls, by name, from the tool list."
+          },
+          "args_json": {
+            "type": "string",
+            "description": "The step's arguments as a JSON object encoded in a string, e.g. {\"query\": \"$fill\", \"max_results\": 20}. Write \"$fill\" for an argument that waits on an earlier step's result."
+          },
+          "depends_on": {
+            "type": "array",
+            "description": "The ids of the earlier steps whose results this step uses. [] when it uses none.",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "expected_result": {
+            "type": "string",
+            "description": "What the tool returns when the step worked: something its result can show."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "done", "failed"],
+            "description": "pending for a step not yet run; the executor sets done or failed."
+          }
+        },
+        "required": ["id", "action", "tool", "args_json", "depends_on", "expected_result", "status"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["steps"],
+  "additionalProperties": false
+}

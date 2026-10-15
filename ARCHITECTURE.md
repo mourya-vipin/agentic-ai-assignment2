@@ -17,20 +17,20 @@ What each layer is for (Lecture 1, slides 40 to 42):
 - **Observability**: a step-by-step record of what it did.
 - **Evaluation**: measuring quality, before and after release.
 
-The table below is RepoMind as Assignment 1 left it. In Assignment 2, the Harness
-row comes to cite the validator and the boundary, and any other row your work
-changes changes with it.
+The table below is RepoMind after Assignment 2. The Harness row now cites the
+plan's validator, its reject exit and the executor's boundary; Memory & State,
+Control & Policy, Observability and Evaluation changed with them.
 
 | Layer | What does this job | Where it is enforced | Status |
 |---|---|---|---|
 | Model | The configured model, called only through the metered client | `harness/client.py:116` | present |
-| Harness | The loop, with three bounds checked in code before every call | `agent/loop.py:38`, `agent/loop.py:41`, `agent/loop.py:44` | present |
-| Tools | Four tools behind one registry (read_file arrived with Assignment 2's starter); post_comment stamps the run_id | `tools/__init__.py:52`, `harness/tracker.py:60` | present |
-| Memory & State | Nothing survives a run, and nothing should yet | none | **EMPTY** |
-| Control & Policy | Nothing decides which writes need a person; the prompt asks politely | none | **EMPTY** |
-| Observability | One trace line per model call and per tool call | `agent/loop.py:50` | partial: traces, no alerts |
-| Evaluation | The grounded check reads the tracker, never the agent | `eval/check_triage.py:7` | partial: offline only |
+| Harness | Assignment 1's loop, with three bounds checked in code before every call; and, for the planned way, a plan written as data before the issue is read, checked against the schema (`ways/planned.py:78`) and by the four-check validator (`agent/validator.py:29`, called at `ways/planned.py:150`) before any tool runs, with a reject exit that escalates after `MAX_REPLANS` (`ways/planned.py:125`), the plan logged before the first tool call (`ways/planned.py:127`), and an executor that runs only the active step's tool and refuses anything else (`ways/planned.py:227`) | `agent/loop.py:38`, `agent/validator.py:29`, `ways/planned.py:150`, `ways/planned.py:125`, `ways/planned.py:227` | present |
+| Tools | Four tools behind one registry (read_file arrived with Assignment 2's starter); post_comment stamps the run_id; the executor checks every input against its tool's schema before the call | `tools/__init__.py:52`, `harness/tracker.py:60`, `ways/planned.py:250` | present |
+| Memory & State | Within a run: the plan's versions and per-step status, and Part G's progress file outside the conversation, written after every tool call; nothing survives a run | `ways/notes.py:66`, `ways/notes.py:87` | partial: one run only |
+| Control & Policy | The plan fixes which steps run before untrusted text arrives; revision only at one checkpoint, bounded by `MAX_REVISIONS`; a second pass in code that holds a draft it cannot verify (`MAX_ROUNDS`); still no approval by a person | `ways/planned.py:300`, `ways/planned.py:359`, `agent/critique.py:48` | partial: no human approval gate yet (Lecture 5) |
+| Observability | One trace line per model call and per tool call; plus the plan as data, schema/validation/revision/off_plan/critique lines, and a diff of the plan against what ran | `agent/loop.py:50`, `ways/planned.py:228`, `ways/planned.py:316`, `agent/diff.py:1` | partial: traces and offline detectors, no alerts |
+| Evaluation | The grounded check reads the tracker, never the agent; three detectors and Lecture 2's ladder over traces; Part F's results script | `eval/check_triage.py:7`, `agent/detectors.py:1`, `eval/lab02.py:1` | partial: offline only |
 
-**Empty layers: 2 of 7**, and two more are partial. Lecture 1, slide 46 expects
-four of the seven to be missing from a first build; Assignment 1 filled
-Observability and Evaluation just enough to measure.
+**Empty layers: 0 of 7**, and four are partial. Assignment 2 moved the plan into the
+Harness, where a program can check it before anything runs; Control & Policy is
+no longer only a prompt, but nothing yet asks a person before the comment posts.

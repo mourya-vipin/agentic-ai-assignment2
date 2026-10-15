@@ -1,0 +1,21 @@
+{
+  "about": "RepoMind's progress file for this run, written by the harness after every tool call. steps_done: the ids of the plan steps that have run, in order. paths: every file path this run has seen, because a search returned it or a read read it, in order. A record of what was seen, not a list of things to do.",
+  "steps_done": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "paths": [
+    "src/i18n/en.json",
+    "src/i18n/fr.json",
+    "src/ingest/errors.ts",
+    "src/ingest/parser.ts",
+    "README.md",
+    "docs/ARCHITECTURE.md",
+    "docs/triage-runbook.md",
+    "test/dedupe.test.ts",
+    "test/parser.test.ts"
+  ]
+}

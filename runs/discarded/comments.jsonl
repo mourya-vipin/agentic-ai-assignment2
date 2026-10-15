@@ -1,0 +1,2 @@
+{"id": 1, "run_id": "planned-4201-s01-f00bd0", "issue": 4201, "body": "label: bug\nfile: src/notifications/templates.ts\n\nThe password reset email generation falls back to `http://localhost:3000` because `process.env.PUBLIC_URL` is not set in production.", "posted_at": "2026-10-14T21:55:18"}
+{"id": 2, "run_id": "planned-4202-s01-5cf9e5", "issue": 4202, "body": "label: feature\nfile: src/exportUtils.ts\n\nRequest to add TSV (tab-separated values) as a supported export format alongside CSV and XLSX.", "posted_at": "2026-10-14T21:55:36"}

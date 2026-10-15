@@ -1,0 +1,24 @@
+{
+  "about": "RepoMind's progress file for this run, written by the harness after every tool call. steps_done: the ids of the plan steps that have run, in order. paths: every file path this run has seen, because a search returned it or a read read it, in order. A record of what was seen, not a list of things to do.",
+  "steps_done": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "paths": [
+    "src/i18n/en.json",
+    "src/i18n/fr.json",
+    "src/notifications/rollup.ts",
+    "src/notifications/templates.ts",
+    "CHANGELOG.md",
+    "README.md",
+    "docs/API.md",
+    "docs/ARCHITECTURE.md",
+    "src/api/users.ts",
+    "src/db/migrations/001_init.sql",
+    "src/db/migrations/003_timezone.sql",
+    "src/db/repos/userRepo.ts"
+  ]
+}

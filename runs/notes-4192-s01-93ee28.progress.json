@@ -1,0 +1,25 @@
+{
+  "about": "RepoMind's progress file for this run, written by the harness after every tool call. steps_done: the ids of the plan steps that have run, in order. paths: every file path this run has seen, because a search returned it or a read read it, in order. A record of what was seen, not a list of things to do.",
+  "steps_done": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "paths": [
+    "CHANGELOG.md",
+    "README.md",
+    "docs/API.md",
+    "docs/ARCHITECTURE.md",
+    "docs/triage-runbook.md",
+    "package.json",
+    "src/api/auth.ts",
+    "src/components/DateRangePicker.tsx",
+    "src/components/ExportButton.tsx",
+    "src/components/ReportTable.tsx",
+    "src/components/Toast.tsx",
+    "src/components/UploadForm.tsx",
+    "src/i18n/en.json"
+  ]
+}

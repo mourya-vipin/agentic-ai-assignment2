@@ -1,0 +1,327 @@
+{
+  "configs": {
+    "agent": {
+      "end_model_stopped": 14,
+      "schema_lines": 0,
+      "validation_lines": 0,
+      "plan_calls": 0,
+      "revisions_valid": 0,
+      "checkpoint_fails": 0,
+      "model_calls": 142,
+      "tool_calls": 128,
+      "cost_usd": 0.07350534,
+      "first_draft_right": 0,
+      "critique_fail_lines": 0,
+      "end_turn_limit": 4,
+      "mean_cost_usd": 0.00408363,
+      "plan_call_share_mean": null,
+      "plan_share_by_calls": {
+        "4": {
+          "runs": 2,
+          "plan_and_revise": 0.0,
+          "plan_call": 0.0
+        },
+        "5": {
+          "runs": 3,
+          "plan_and_revise": 0.0,
+          "plan_call": 0.0
+        },
+        "6": {
+          "runs": 5,
+          "plan_and_revise": 0.0,
+          "plan_call": 0.0
+        },
+        "7": {
+          "runs": 1,
+          "plan_and_revise": 0.0,
+          "plan_call": 0.0
+        },
+        "11": {
+          "runs": 2,
+          "plan_and_revise": 0.0,
+          "plan_call": 0.0
+        },
+        "12": {
+          "runs": 5,
+          "plan_and_revise": 0.0,
+          "plan_call": 0.0
+        }
+      },
+      "per_issue_runs": {
+        "4201": 3,
+        "4202": 3,
+        "4203": 3,
+        "4204": 3,
+        "4205": 3,
+        "4206": 3
+      }
+    },
+    "planned_off": {
+      "end_completed": 18,
+      "schema_lines": 1,
+      "validation_lines": 1,
+      "plan_calls": 18,
+      "revisions_valid": 9,
+      "checkpoint_fails": 10,
+      "model_calls": 110,
+      "tool_calls": 99,
+      "cost_usd": 0.0807727,
+      "first_draft_right": 0,
+      "critique_fail_lines": 0,
+      "mean_cost_usd": 0.004487372222222222,
+      "plan_call_share_mean": 0.14975600007239823,
+      "plan_share_by_calls": {
+        "5": {
+          "runs": 9,
+          "plan_and_revise": 0.17608941641404968,
+          "plan_call": 0.17608941641404968
+        },
+        "6": {
+          "runs": 1,
+          "plan_and_revise": 0.4267288267288267,
+          "plan_call": 0.177000777000777
+        },
+        "7": {
+          "runs": 7,
+          "plan_and_revise": 0.2981747778326618,
+          "plan_call": 0.1225360761899476
+        },
+        "10": {
+          "runs": 1,
+          "plan_and_revise": 0.3093409895172598,
+          "plan_call": 0.07604994324631101
+        }
+      },
+      "per_issue_runs": {
+        "4201": 3,
+        "4202": 3,
+        "4203": 3,
+        "4204": 3,
+        "4205": 3,
+        "4206": 3
+      }
+    },
+    "planned_self": {
+      "end_completed": 18,
+      "schema_lines": 1,
+      "validation_lines": 1,
+      "plan_calls": 18,
+      "revisions_valid": 10,
+      "checkpoint_fails": 11,
+      "model_calls": 132,
+      "tool_calls": 99,
+      "cost_usd": 0.09785630000000001,
+      "first_draft_right": 8,
+      "critique_fail_lines": 0,
+      "mean_cost_usd": 0.005436461111111112,
+      "plan_call_share_mean": 0.11261658690253364,
+      "plan_share_by_calls": {
+        "6": {
+          "runs": 9,
+          "plan_and_revise": 0.13169497256071253,
+          "plan_call": 0.13169497256071253
+        },
+        "7": {
+          "runs": 1,
+          "plan_and_revise": 0.3034685223442427,
+          "plan_call": 0.12384473197781885
+        },
+        "8": {
+          "runs": 4,
+          "plan_and_revise": 0.23519805926942636,
+          "plan_call": 0.09639666073552343
+        },
+        "9": {
+          "runs": 2,
+          "plan_and_revise": 0.22225693862130175,
+          "plan_call": 0.09215531601371048
+        },
+        "10": {
+          "runs": 1,
+          "plan_and_revise": 0.327584968024718,
+          "plan_call": 0.08184235108141122
+        },
+        "11": {
+          "runs": 1,
+          "plan_and_revise": 0.2699243746364165,
+          "plan_call": 0.06625945317044793
+        }
+      },
+      "per_issue_runs": {
+        "4201": 3,
+        "4202": 3,
+        "4203": 3,
+        "4204": 3,
+        "4205": 3,
+        "4206": 3
+      }
+    },
+    "planned_external": {
+      "end_completed": 17,
+      "schema_lines": 0,
+      "validation_lines": 0,
+      "plan_calls": 18,
+      "revisions_valid": 11,
+      "checkpoint_fails": 11,
+      "model_calls": 115,
+      "tool_calls": 100,
+      "cost_usd": 0.08694009999999999,
+      "first_draft_right": 7,
+      "critique_fail_lines": 4,
+      "end_escalated": 1,
+      "mean_cost_usd": 0.004830005555555555,
+      "plan_call_share_mean": 0.13784797888526412,
+      "plan_share_by_calls": {
+        "5": {
+          "runs": 8,
+          "plan_and_revise": 0.17409075770179266,
+          "plan_call": 0.17409075770179266
+        },
+        "6": {
+          "runs": 2,
+          "plan_and_revise": 0.11951739796801694,
+          "plan_call": 0.11951739796801694
+        },
+        "7": {
+          "runs": 4,
+          "plan_and_revise": 0.2970315366722788,
+          "plan_call": 0.12240161114059418
+        },
+        "8": {
+          "runs": 1,
+          "plan_and_revise": 0.2298323183448736,
+          "plan_call": 0.09501960457161926
+        },
+        "9": {
+          "runs": 3,
+          "plan_and_revise": 0.3491614245177197,
+          "plan_call": 0.08829223775012751
+        }
+      },
+      "per_issue_runs": {
+        "4201": 3,
+        "4202": 3,
+        "4203": 3,
+        "4204": 3,
+        "4205": 3,
+        "4206": 3
+      }
+    }
+  },
+  "notes": {
+    "notes-4203-s01-1bde7e": {
+      "tokens": 16846,
+      "prompt_tokens": 15112,
+      "model_calls": 12,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "on",
+      "issue": 4203
+    },
+    "notes-4203-s01-e1119a": {
+      "tokens": 12870,
+      "prompt_tokens": 11604,
+      "model_calls": 10,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "off",
+      "issue": 4203
+    },
+    "notes-4203-s02-8812ee": {
+      "tokens": 14953,
+      "prompt_tokens": 13366,
+      "model_calls": 11,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "on",
+      "issue": 4203
+    },
+    "notes-4203-s02-e21be7": {
+      "tokens": 13217,
+      "prompt_tokens": 11733,
+      "model_calls": 11,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "off",
+      "issue": 4203
+    },
+    "notes-4204-s01-4012e7": {
+      "tokens": 13545,
+      "prompt_tokens": 12297,
+      "model_calls": 10,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "off",
+      "issue": 4204
+    },
+    "notes-4204-s01-db01e3": {
+      "tokens": 17917,
+      "prompt_tokens": 16270,
+      "model_calls": 12,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "on",
+      "issue": 4204
+    },
+    "notes-4204-s02-1a23a8": {
+      "tokens": 17825,
+      "prompt_tokens": 16222,
+      "model_calls": 12,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "on",
+      "issue": 4204
+    },
+    "notes-4204-s02-c08c09": {
+      "tokens": 15205,
+      "prompt_tokens": 13549,
+      "model_calls": 13,
+      "compactions": 3,
+      "end": "completed",
+      "notes": "off",
+      "issue": 4204
+    },
+    "notes-4206-s01-0c623e": {
+      "tokens": 15009,
+      "prompt_tokens": 13436,
+      "model_calls": 12,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "off",
+      "issue": 4206
+    },
+    "notes-4206-s01-3f578e": {
+      "tokens": 12354,
+      "prompt_tokens": 11297,
+      "model_calls": 9,
+      "compactions": 1,
+      "end": "completed",
+      "notes": "on",
+      "issue": 4206
+    },
+    "notes-4206-s02-74d901": {
+      "tokens": 13119,
+      "prompt_tokens": 11899,
+      "model_calls": 10,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "off",
+      "issue": 4206
+    },
+    "notes-4206-s02-e18c36": {
+      "tokens": 13192,
+      "prompt_tokens": 12085,
+      "model_calls": 10,
+      "compactions": 2,
+      "end": "completed",
+      "notes": "on",
+      "issue": 4206
+    }
+  },
+  "schema_sizes": {
+    "optional": 0,
+    "unions": 0,
+    "properties": 8,
+    "depth": 5
+  }
+}

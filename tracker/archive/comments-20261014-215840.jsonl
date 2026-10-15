@@ -1,0 +1,2 @@
+{"id": 1, "run_id": "planned-4192-s01-bef6ad", "issue": 4192, "body": "label: bug\nfile: none\n\nThe export button stays disabled after an error occurs during export, requiring a page reload.", "posted_at": "2026-10-14T21:57:44"}
+{"id": 2, "run_id": "planned-4192-s01-5e9875", "issue": 4192, "body": "label: bug\nfile: src/components/ExportButton.tsx\n\nThe ExportButton component sets `busy` to true when starting an export but does not reset it on failure because `.catch()` is missing from the promise chain in `handleClick`.", "posted_at": "2026-10-14T21:58:25"}
